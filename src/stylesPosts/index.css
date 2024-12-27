@@ -1,0 +1,245 @@
+body {
+  height: 100vh;
+  /* Altura completa de la ventana */
+  display: flex;
+  /* Usamos Flexbox para centrar */
+  justify-content: center;
+  /* Centrado horizontal */
+  align-items: center;
+  /* Centrado vertical */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* Fuente agradable */
+  position: relative;
+
+}
+
+.titulo {
+  font-size: 3rem;
+  /* Tamaño grande para el título */
+  font-weight: 700;
+  /* Peso de la fuente */
+  color: #333;
+  /* Color oscuro para el texto */
+  text-align: center;
+  /* Centrar texto */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  padding: 20px;
+  border-radius: 10px;
+  /* Bordes redondeados */
+  background-color: #fff;
+  /* Fondo blanco para el título */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+input[type="text"] {
+  color: #333;
+  padding: 12px 15px;
+  /* Espaciado interno */
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  /* Borde claro */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  outline: none;
+  /* Sin borde al enfocar */
+  transition: border-color 0.3s ease;
+  /* Transición suave */
+  background-color: #fff;
+  /* Fondo blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  text-align: center;
+  /* Centrar horizontalmente */
+  line-height: normal;
+  /* Ajustar altura del texto */
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  /* Borde verde cuando está enfocado */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  /* Sombra verde */
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+  /* Centrar texto del placeholder */
+  color: #afa3a3;
+  /* Color suave para el texto del placeholder */
+}
+
+
+input[type="text"]:hover {
+  border-color: #aaa;
+  /* Borde más oscuro cuando el mouse pasa por encima */
+}
+
+
+ul {
+  list-style-type: none;
+  /* Quitar viñetas */
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px;
+  /* Ancho máximo de la lista */
+}
+
+li {
+  display: flex;
+  /* Usar flexbox para alinear el contenido */
+  justify-content: space-between;
+  /* Espacio entre los elementos */
+  align-items: center;
+  background-color: #f9f9f9;
+  /* Fondo claro */
+  border: 2px solid #ddd;
+  /* Borde sutil */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  padding: 15px 20px;
+  /* Espaciado interno */
+  margin-bottom: 10px;
+  /* Espacio entre elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Efecto al pasar el mouse */
+}
+
+li:hover {
+  transform: translateY(-3px);
+  /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Sombra más pronunciada */
+}
+
+.spanPost {
+  font-weight: bold;
+  color: #333;
+  /* Texto oscuro */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.parrafoPost {
+  flex: 1;
+  /* Ocupa el espacio restante */
+  margin: 0 10px;
+  /* Espaciado lateral */
+  font-size: 1rem;
+  color: #666;
+  /* Color gris suave */
+}
+
+.add-button {
+  position: fixed;
+  /* Posición fija en la pantalla */
+  bottom: 20px;
+  /* Separación de la parte inferior */
+  right: 20px;
+  /* Separación del lado derecho */
+  width: 60px;
+  /* Ancho del botón */
+  height: 60px;
+  /* Altura del botón */
+  background-color: #4CAF50;
+  /* Color verde */
+  border: none;
+  border-radius: 50%;
+  /* Hacer el botón redondo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra */
+  color: white;
+  /* Color del símbolo */
+  font-size: 2rem;
+  /* Tamaño del símbolo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* Mostrar un cursor al pasar */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Efecto suave */
+  z-index: 200;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
+  /* Aumentar ligeramente al pasar el mouse */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra más pronunciada */
+}
+
+.add-button:active {
+  transform: scale(0.95);
+  /* Reducir ligeramente al hacer clic */
+}
+
+
+.task-icons {
+  display: flex;
+  gap: 15px;
+  /* Separación entre los iconos */
+}
+
+/* Icono de Check */
+.check-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* Redondo */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Efecto suave */
+
+}
+
+.check-icon.completed {
+  background-color: #4CAF50;
+  /* Verde si completada */
+  color: white;
+
+}
+
+.check-icon.not-completed {
+  background-color: #ccc;
+  /* Gris si no completada */
+  color: black;
+}
+
+/* Icono de Borrar */
+.delete-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* Redondo */
+  background-color: #f44336;
+  /* Rojo */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.1);
+  /* Ampliar al pasar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra al pasar */
+}
+
+.check-icon:hover {
+  transform: scale(1.1);
+  /* Efecto de ampliación */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra */
+}
