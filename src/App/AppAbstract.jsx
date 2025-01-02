@@ -18,6 +18,7 @@ function AppAbs({
   completePost, deletePost,
   openModal,
   setOpenModal,
+  addPost,
 }) {
 
   return (
@@ -47,7 +48,7 @@ function AppAbs({
 
       {openModal && (//Verificamos el estado, y si esta abierto renderizamos el Modal(componenete), en caso contrario se cierra
         <Modal style={{ zIndex: 200 }} >
-          <NewPostForm ></NewPostForm>
+          <NewPostForm setOpenModal={setOpenModal} addPost={addPost}></NewPostForm>
         </Modal>
       )
       }
@@ -58,3 +59,7 @@ function AppAbs({
 }
 
 export { AppAbs }
+/**
+ * <NewPostForm setOpenModal={setOpenModal} addPost={addPost}></NewPostForm>
+ * le pasamos setOpenModal y addPost a NewPostForm
+ */

@@ -31,15 +31,21 @@ function App() {
     }
   );
 
+
+  //savePost actualice el estado correctamente
+  const savePost = (newPost) => {
+    setStatelist(newPost);
+  };
+
   //add post
-  const addTodo = (text) => {
-    const newTodos = [...todos];
-    newTodos.push({
+  const addPost = (text) => {
+    const newPost = [...stateList];
+    newPost.push({
       text,
       completed: false,
     });
-    saveTodos(newTodos);
-  };
+    savePost(newPost);
+  }
 
   const completePost = (text) => {
     const newPost = [...stateList];//myListPost
@@ -67,6 +73,7 @@ function App() {
   }
 
 
+
   return (
     <AppAbs
 
@@ -79,6 +86,7 @@ function App() {
       deletePost={deletePost}
       openModal={openModal}
       setOpenModal={setOpenModal}
+      addPost={addPost}
 
     >
     </AppAbs>
