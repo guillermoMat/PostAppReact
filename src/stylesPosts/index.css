@@ -36,6 +36,14 @@ body {
 }
 
 input[type="text"] {
+  display: block;
+  /* Asegura que ocupe una línea completa */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  width: 100%;
+  /* Ajusta al ancho disponible */
+  max-width: 400px;
+  /* Ancho máximo */
   color: #333;
   padding: 12px 15px;
   /* Espaciado interno */
